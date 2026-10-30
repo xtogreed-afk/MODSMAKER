@@ -25,3 +25,4 @@ Executing steps
  > Running 'stripClient'
  > Running 'stripServer'
  > Running 'merge'
+ > Running 'listLibraries'
