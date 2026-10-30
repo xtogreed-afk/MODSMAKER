@@ -23,3 +23,5 @@ Executing steps
  > Running 'downloadClientMappings'
  > Running 'mergeMappings'
  > Running 'stripClient'
+ > Running 'stripServer'
+ > Running 'merge'
