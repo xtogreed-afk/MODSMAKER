@@ -17,3 +17,6 @@ Fabric Loom: 1.15.5
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources
 > Task :processIncludeJars
+> Task :sourcesJar
+> Task :processTestResources NO-SOURCE
+> Task :validateAccessWidener NO-SOURCE
