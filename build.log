@@ -19,3 +19,7 @@ Executing steps
  > Running 'downloadJson'
  > Running 'downloadClient'
  > Running 'downloadServer'
+ > Running 'extractServer'
+ > Running 'downloadClientMappings'
+ > Running 'mergeMappings'
+ > Running 'stripClient'
