@@ -1,0 +1,9 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "tw"
+version = "1.0.0"
+displayName = "хуй"
+description = '''хуй'''
