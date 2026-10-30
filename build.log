@@ -19,3 +19,24 @@ Please make sure to read and understand the following license:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # (c) 2020 Microsoft Corporation. These mappings are provided "as-is" and you bear the risk of using them. You may copy and use the mappings for development purposes, but you may not redistribute the mappings complete and unmodified. Microsoft makes no warranties, express or implied, with respect to the mappings provided here.  Use and modification of this document or the source code (in any form) of Minecraft: Java Edition is governed by the Minecraft End User License Agreement available at https://account.mojang.com/documents/minecraft_eula.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+> Task :compileJava
+/home/runner/work/MODSMAKER/MODSMAKER/src/main/java/com/example/my/My.java:1: error: ';' expected
+package com.example.my
+                      ^
+/home/runner/work/MODSMAKER/MODSMAKER/src/main/java/com/example/my/My.java:3: error: ';' expected
+import net.fabricmc.api.ModInitializer
+                                      ^
+/home/runner/work/MODSMAKER/MODSMAKER/src/main/java/com/example/my/My.java:7: error: class, interface, enum, or record expected
+   public My INSTANCE = new My();
+          ^
+/home/runner/work/MODSMAKER/MODSMAKER/src/main/java/com/example/my/My.java:9: error: class, interface, enum, or record expected
+   public const val MOD_ID: String = "my"
+          ^
+/home/runner/work/MODSMAKER/MODSMAKER/src/main/java/com/example/my/My.java:12: error: class, interface, enum, or record expected
+   public open fun onInitialize() {
+          ^
+/home/runner/work/MODSMAKER/MODSMAKER/src/main/java/com/example/my/My.java:14: error: class, interface, enum, or record expected
+   }
+   ^
+6 errors
