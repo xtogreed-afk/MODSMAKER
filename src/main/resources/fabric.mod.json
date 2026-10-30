@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "id": "my_mod",
+  "version": "1.0.0",
+  "name": "My Mod",
+  "description": "",
+  "environment": "*",
+  "entrypoints": { "main": ["com.example.my_mod.MyMod"] },
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
