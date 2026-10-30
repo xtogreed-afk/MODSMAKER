@@ -35,3 +35,5 @@ Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de
 [11:03:53] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.28_mapped_official_1.20.1/forge-1.20.1-47.4.28_mapped_official_1.20.1.jar
 [11:03:53] [main/INFO]: Transformer file /home/runner/work/MODSMAKER/MODSMAKER/build/_atJar_4/parent_at.cfg
 [11:03:53] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.28_mapped_official_1.20.1/forge-1.20.1-47.4.28_mapped_official_1.20.1.jar, overwriting
+[11:03:57] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.28_mapped_official_1.20.1/forge-1.20.1-47.4.28_mapped_official_1.20.1.jar
+Creating SRG -> MCP TSRG
