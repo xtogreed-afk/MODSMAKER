@@ -27,3 +27,4 @@ Executing steps
  > Running 'merge'
  > Running 'listLibraries'
  > Running 'rename'
+Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
