@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "myaddon",
+  "version": "1.0.0",
+  "name": "My Addo",
+  "description": "",
+  "environment": "*",
+  "entrypoints": { "main": ["com.example.myaddon.MyAddo"] },
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.26.30",
+    "java": ">=21"
+  }
+}
