@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "my_mo",
+  "version": "1.0.0",
+  "name": "My Mo",
+  "description": "",
+  "environment": "*",
+  "entrypoints": { "main": [{ "adapter": "kotlin", "value": "hui.hui.hui.my_mo.MyMo" }] },
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*"
+  }
+}
