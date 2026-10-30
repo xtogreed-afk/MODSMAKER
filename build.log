@@ -15,3 +15,5 @@ Daemon will be stopped at the end of the build
 Fabric Loom: 1.15.5
 
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources
+> Task :processIncludeJars
