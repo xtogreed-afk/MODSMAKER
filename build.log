@@ -26,3 +26,4 @@ Executing steps
  > Running 'stripServer'
  > Running 'merge'
  > Running 'listLibraries'
+ > Running 'rename'
