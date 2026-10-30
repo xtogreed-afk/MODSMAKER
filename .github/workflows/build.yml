@@ -1,0 +1,51 @@
+name: Build mod
+on:
+  push:
+    branches: ['addonstudio/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 9.2.0
+      - name: Gradle build (live log)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/live && : > /tmp/live/build.log
+          LB="addonstudio-log/${GITHUB_RUN_ID}"
+          rm -rf /tmp/livegit && mkdir /tmp/livegit
+          git -C /tmp/livegit init -q
+          git -C /tmp/livegit config user.name addonstudio
+          git -C /tmp/livegit config user.email addonstudio@users.noreply.github.com
+          git -C /tmp/livegit remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git -C /tmp/livegit checkout -q -b "$LB"
+          push_log() {
+            cp /tmp/live/build.log /tmp/livegit/build.log
+            git -C /tmp/livegit add build.log
+            git -C /tmp/livegit commit -q -m log --allow-empty >/dev/null 2>&1
+            git -C /tmp/livegit push -q -f origin "$LB" >/dev/null 2>&1 || true
+          }
+          ( while true; do sleep 3; push_log; done ) &
+          PUSHER=$!
+          gradle build --no-daemon --console=plain --stacktrace 2>&1 | tee /tmp/live/build.log
+          CODE=${PIPESTATUS[0]}
+          kill $PUSHER 2>/dev/null || true
+          push_log
+          exit $CODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mod-jar
+          path: build/libs/*.jar
+          if-no-files-found: error
